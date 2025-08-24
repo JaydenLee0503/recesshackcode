@@ -1,16 +1,19 @@
+// Footer.js
 import React from 'react';
 import './Footer.css';
+
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-top">
-        {/* ✅ Logo stays top-left */}
+        {/* ✅ Logo placeholder */}
         <div className="footer-logo-wrapper">
+          {/* Add your logo if needed */}
         </div>
 
         <div className="footer-columns">
           <div className="footer-column">
-            <h4>Factgpt</h4>
+            <h4>Finora</h4>
             <ul>
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="#features">Features</a></li>
@@ -18,6 +21,7 @@ const Footer = () => {
               <li><a href="#blog">Blog</a></li>
             </ul>
           </div>
+
           <div className="footer-column">
             <h4>Company</h4>
             <ul>
@@ -27,6 +31,7 @@ const Footer = () => {
               <li><a href="#team">Team</a></li>
             </ul>
           </div>
+
           <div className="footer-column">
             <h4>Legal</h4>
             <ul>
@@ -38,11 +43,10 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Factgpt. All rights reserved.</p>
-        <p>Made with ❤️ by the Factgpt-v0 team.</p>
-        {/* ✅ GitHub + Email */}
+        <p>© {new Date().getFullYear()} Finora. All rights reserved.</p>
+        <p>Made with ❤️ by the Finora team.</p>
         <p>
-          GitHub: <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">JaydenLee0503</a> | 
+          GitHub: <a href="https://github.com/JaydenLee0503" target="_blank" rel="noopener noreferrer">JaydenLee0503</a> | 
           Email: <a href="mailto:isangmin0503@gmail.com">isangmin0503@gmail.com</a>
         </p>
       </div>

@@ -6,11 +6,11 @@ import Rishabh from "../assets/images/Rishabh_Picture.png";
 
 const Enterprise = () => {
   return (
-    <section className="team-section">
+    <section id="team" className="team-section">
       <div className="team-container">
-        <h2 className="team-title">Meet the Team Behind the Facts</h2>
+        <h2 className="team-title">Meet the Team Behind the Finance</h2>
         <p className="team-subtitle">
-          We’re a small, focused team building the most accurate fact-checking
+          We’re a small, focused team building the comforting, trustworthy finance
           tools powered by AI.
         </p>
 
@@ -21,7 +21,7 @@ const Enterprise = () => {
             <p className="team-role">Co-Founder & Frontend Developer</p>
             <p className="team-bio">
               Jayden designs and builds the user experience. He ensures the
-              interface is fast, intuitive, and easy for anyone to verify facts.
+              interface is fast, intuitive, and easy for anyone to use it.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const Enterprise = () => {
             <h3 className="team-name">Rishabh Mittal</h3>
             <p className="team-role">Co-Founder & Backend Engineer</p>
             <p className="team-bio">
-              Rishabh builds the infrastructure that powers FactGPT and Gemini.
+              Rishabh builds the infrastructure that powers Our AI and Gemini.
               He focuses on scalable, efficient systems and trustworthy AI.
             </p>
           </div>

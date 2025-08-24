@@ -27,15 +27,11 @@ const TopFold = () => {
     <div className='topfold'>
       {/* Navbar */}
       <div className='navbar'>
-        <h2 className='logo'>datarails</h2>
+        <h2 className='logo'>FINORA</h2>
         <ul className='nav-links'>
-          <li>Solutions</li>
-          <li>Product</li>
-          <li>Pricing</li>
-          <li>Resources</li>
-          <li>Success Stories</li>
-          <li>Academy</li>
-          <li>About</li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#footer">Footer</a></li>
         </ul>
         <div className='nav-right'>
           <button className='login-btn' onClick={() => loginWithRedirect()}>
@@ -51,9 +47,9 @@ const TopFold = () => {
 
       {/* Hero Section */}
       <div className='hero'>
-        <h1 className='hero-title'>Transform the CFO’s Office</h1>
+        <h1 className='hero-title'>Transform your money plan</h1>
         <p className='hero-subtitle'>
-          Make the CFO’s office the home of business insights with the #1 AI-powered Excel-native FP&A platform.
+          Make your personal plans about money with the #1 AI-powered finance platform.
         </p>
         <p className='hero-question'>What do you want to simplify today?</p>
 
