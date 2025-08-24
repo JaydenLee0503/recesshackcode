@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 /* Navbar stretched */
 .navbar {
   display: flex;
@@ -20,6 +21,7 @@
 }
 
 /* Left side of navbar */
+
 .nav-left {
   display: flex;
   align-items: center;
