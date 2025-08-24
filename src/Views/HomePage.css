@@ -5,6 +5,6 @@
     padding: 0x;
     max-width: 1700px;
     margin: 0 auto;
-    background: linear-gradient(to bottom right, #f3e8ff, #e9d5ff, #c084fc);
+    background: #ffffff;
   background-attachment: fixed; /* keeps gradient stable while scrolling */
 }

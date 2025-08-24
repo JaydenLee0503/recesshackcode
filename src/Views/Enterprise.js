@@ -1,3 +1,4 @@
+// Enterprise.js
 import React from "react";
 import "./Enterprise.css";
 import Jayden from "../assets/images/Jayden_Picture.png";
@@ -14,7 +15,6 @@ const Enterprise = () => {
         </p>
 
         <div className="team-grid">
-          {/* Jayden */}
           <div className="team-card">
             <img src={Jayden} alt="Jayden Lee" className="team-image" />
             <h3 className="team-name">Jayden Lee</h3>
@@ -25,7 +25,6 @@ const Enterprise = () => {
             </p>
           </div>
 
-          {/* Rishabh */}
           <div className="team-card">
             <img src={Rishabh} alt="Rishabh Mittal" className="team-image" />
             <h3 className="team-name">Rishabh Mittal</h3>

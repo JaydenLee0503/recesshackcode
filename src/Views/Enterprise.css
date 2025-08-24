@@ -1,7 +1,8 @@
 .team-section {
   width: 100%;
-  padding: 70px 0 100px;
-  background: linear-gradient(to bottom right, #f3e8ff, #e9d5ff, #c084fc);/* padding counted inside width */
+  padding: 100px 0 100px;
+  background: #f3e8ff; /* matches curve fill */
+  margin-top: -50px;
 }
 
 .team-container {
