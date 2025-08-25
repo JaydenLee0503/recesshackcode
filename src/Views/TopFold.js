@@ -1,26 +1,25 @@
-// TopFold.js
 import React from 'react';
 import './TopFold.css';
-import {useAuth0} from '@auth0/auth0-react';
-import {ReactComponent as DataIcon} from '../assets/images/data.svg';
-import {ReactComponent as FinancialIcon} from '../assets/images/financial.svg';
-import {ReactComponent as BudgetIcon} from '../assets/images/budget.svg';
-import {ReactComponent as ERPIcon} from '../assets/images/erp.svg';
-import {ReactComponent as MonthEndIcon} from '../assets/images/monthend.svg';
-import {ReactComponent as CashIcon} from '../assets/images/cash.svg';
-import {ReactComponent as AnalysisIcon} from '../assets/images/analysis.svg';
+import { useAuth0 } from '@auth0/auth0-react';
+import { ReactComponent as DataIcon } from '../assets/images/data.svg';
+import { ReactComponent as FinancialIcon } from '../assets/images/financial.svg';
+import { ReactComponent as BudgetIcon } from '../assets/images/budget.svg';
+import { ReactComponent as ERPIcon } from '../assets/images/erp.svg';
+import { ReactComponent as MonthEndIcon } from '../assets/images/monthend.svg';
+import { ReactComponent as CashIcon } from '../assets/images/cash.svg';
+import { ReactComponent as AnalysisIcon } from '../assets/images/analysis.svg';
 
 const TopFold = () => {
-  const {loginWithRedirect, logout, isAuthenticated, user} = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   const cards = [
-    {icon: DataIcon, label: 'Data Consolidation'},
-    {icon: FinancialIcon, label: 'Financial Reporting'},
-    {icon: BudgetIcon, label: 'Budgeting & Forecasting'},
-    {icon: ERPIcon, label: 'ERP-Excel Connectivity'},
-    {icon: MonthEndIcon, label: 'Month-End Close'},
-    {icon: CashIcon, label: 'Cash Management'},
-    {icon: AnalysisIcon, label: 'Data Analysis'},
+    { icon: DataIcon, label: 'Data Consolidation' },
+    { icon: FinancialIcon, label: 'Financial Reporting' },
+    { icon: BudgetIcon, label: 'Budgeting & Forecasting' },
+    { icon: ERPIcon, label: 'ERP-Excel Connectivity' },
+    { icon: MonthEndIcon, label: 'Month-End Close' },
+    { icon: CashIcon, label: 'Cash Management' },
+    { icon: AnalysisIcon, label: 'Data Analysis' },
   ];
 
   return (
@@ -34,13 +33,31 @@ const TopFold = () => {
           <li><a href="#footer">Footer</a></li>
         </ul>
         <div className='nav-right'>
-          <button className='login-btn' onClick={() => loginWithRedirect()}>
-            {isAuthenticated ? `Welcome, ${user.name}` : 'Login'}
-          </button>
-          {!isAuthenticated && (
-            <button className='signup-btn' onClick={() => loginWithRedirect({screen_hint: 'signup'})}>
-              Sign Up
-            </button>
+          {!isAuthenticated ? (
+            <>
+              <button className='login-btn' onClick={() => loginWithRedirect()}>
+                Login
+              </button>
+              <button className='signup-btn' onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
+                Sign Up
+              </button>
+            </>
+          ) : (
+            <>
+              <span style={{ marginRight: '10px', fontWeight: '500' }}>Welcome, {user.name}</span>
+              <button
+                className='redirect-btn'
+                onClick={() => window.open('https://recesshackathon-backend-1.onrender.com/', '_blank')}
+              >
+                Go to Finora App
+              </button>
+              <button
+                className='logout-btn'
+                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+              >
+                Log Out
+              </button>
+            </>
           )}
         </div>
       </div>
@@ -53,7 +70,6 @@ const TopFold = () => {
         </p>
         <p className='hero-question'>What do you want to simplify today?</p>
 
-        {/* Cards */}
         <div className='hero-cards'>
           {cards.map((card, index) => {
             const Icon = card.icon;
@@ -66,16 +82,11 @@ const TopFold = () => {
           })}
         </div>
 
-        {/* CTA */}
         {!isAuthenticated ? (
           <button className='cta-btn' onClick={() => loginWithRedirect()}>
             Log in & Get Started
           </button>
-        ) : (
-          <button className='cta-btn' onClick={() => logout({logoutParams: {returnTo: window.location.origin}})}>
-            Log Out
-          </button>
-        )}
+        ) : null}
       </div>
 
       {/* Curve */}

@@ -177,3 +177,36 @@
   transform: translateY(-2px);
 }
 
+.redirect-btn {
+  background: #7d3cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.redirect-btn:hover {
+  background: #5b0acc;
+}
+
+.logout-btn {
+  background: #ff3970;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+.logout-btn:hover {
+  background: #e42c5a;
+}
+
